@@ -1,0 +1,12 @@
+#!/bin/bash
+
+h=$(date +%H)
+echo $h
+
+if [ $h -gt 6 ] && [ $h -lt 11 ]; then
+	echo "Chao buoi sang"
+elif [ $h -gt 11 ] && [ $h -lt 13 ]; then
+	echo "chao buoi trua"
+else
+	echo "chao buoi toi"
+fi

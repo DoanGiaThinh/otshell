@@ -1,0 +1,28 @@
+#!/bin/bash
+
+a=("cafe den" "cafe da" "cafe sua" "bac xiu")
+echo "${a[@]}";
+
+t=1
+
+for i in "${a[@]}"
+do
+	echo "$t. $i"	;
+	((t++))
+done
+
+echo "ban chon thuc uong nao tu (1-4)?"
+read c
+
+case $c in
+	1)
+		echo "Ban chon : ${a[0]}";;
+	2)
+		echo "Ban chon : ${a[1]}";;
+	3)
+		echo "Ban chon : ${a[2]}";;
+	4)
+		echo "Ban chon : ${a[3]}";;
+	*)
+		echo "thuc uong khong co trong menu";;
+esac

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+a=("Cong(+)" "Tru(-)" "Nhan(*)" "Chia(/)")
+echo "${a[@]}"
+
+while true
+do
+	echo "${a[@]}";
+	echo "Ban cho phep tinh nao?"
+	read c
+	if [ "$c" == "q" ] || [ "$c" == "Q" ]; then
+		break
+	fi	
+
+	echo "vui long nhap 2 so de tinh"
+	read b d
+	case $c in
+		1)
+			echo "Ban chon phep ${a[0]} $b + $d = $((b + d))";;
+		2)
+			echo "Ban chon phep ${a[1]} $b - $d = $((b - d))";;
+		3)
+			echo "Ban chon phep ${a[2]} $b * $d = $((b * d))";;
+		4)
+			echo "Ban chon phep ${a[3]} $b / $d = $((b / d))";;
+		*)
+			echo "phep tinh khong hop le";;
+	esac
+done
+
+
+
+

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "vui long nhap ten cua ban";
+read a;
+echo "vui long nhap ho cua ban";
+read b;
+
+ten=$USERNAME;
+ho="Doan";
+
+if [ "$a" = "$ten" ] && [ "$b" = "$ho" ]; then
+	echo "Ten trung khop"
+else
+	echo "ten khong trung khop"
+fi
